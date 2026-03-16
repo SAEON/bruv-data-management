@@ -1,3 +1,3 @@
 # bruv-data-management
 
-This is the Benthic Remote Underwater Video Systems (BRUVs) data management repo
+This is the Baited Remote Underwater Video Systems (BRUVs) data management repo
