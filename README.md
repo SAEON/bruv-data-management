@@ -1,4 +1,3 @@
-
 # BRUV Data Workflow – SAEON & SAIAB Collaboration
 
 ## Overview
@@ -120,4 +119,7 @@ Future work may include:
 ---
 
 
+
+=======
+This is the Baited Remote Underwater Video Systems (BRUVs) data management repo
 
