@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr as emailstr
-from datetime import datetime  
+from datetime import datetime
 
 
 class AgentBase(BaseModel):
@@ -9,8 +9,10 @@ class AgentBase(BaseModel):
     title: str
     email: emailstr
 
+
 class AgentCreate(AgentBase):
     password: str
+
 
 class Agent(AgentBase):
     id: int
@@ -19,5 +21,3 @@ class Agent(AgentBase):
 
     class Config:
         orm_mode = True
-
-
