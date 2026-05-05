@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from passlib.context import CryptContext
 from fastapi.middleware.cors import CORSMiddleware
+# from db.models import Agent
+
 
 app = FastAPI()
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
