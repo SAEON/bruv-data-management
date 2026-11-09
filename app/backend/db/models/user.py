@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text, text
 from sqlalchemy.orm import relationship
 from db.database import Base
 
@@ -11,7 +11,7 @@ class User(Base):
     full_name = Column(Text, nullable=True)
     email = Column(String, unique=True, index=True, nullable=False)
     password = Column(String, nullable=False)  # hashed password
-    is_active = Column(Boolean, nullable=False, default=False)
+    is_active = Column(Boolean, nullable=False, default=False, server_default=text("false"))
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
 
     user_roles = relationship("UserRole", back_populates="user", cascade="all, delete-orphan")

@@ -1,4 +1,4 @@
-"""Add the complete BRUV relational field-work schema.
+"""Add the complete relational field-work schema.
 
 Revision ID: b7d9a3e124af
 Revises: 72e95510c527

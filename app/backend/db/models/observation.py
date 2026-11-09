@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Float, DateTime, Text
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Float, DateTime, Text, text
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from db.database import Base
@@ -20,7 +20,7 @@ class Observation(Base):
     species = Column(String, nullable=True)
     abundance = Column(Integer, nullable=True)
     abundance_type = Column(String, nullable=True)
-    has_fed = Column(Boolean, default=False)
+    has_fed = Column(Boolean, default=False, server_default=text("false"))
     emobs_data_type = Column(String, nullable=True)
 
     deployment = relationship("Deployment", back_populates="observations")

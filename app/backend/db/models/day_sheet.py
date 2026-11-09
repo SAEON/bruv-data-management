@@ -1,6 +1,6 @@
 """Field-trip day-sheet model."""
 
-from sqlalchemy import Column, Date, ForeignKey, Integer, Text
+from sqlalchemy import Column, Date, ForeignKey, Integer, Text, String
 from sqlalchemy.orm import relationship
 from db.database import Base
 
@@ -20,7 +20,7 @@ class DaySheet(Base):
     rain = Column(Text, nullable=True)
     surface_visibility = Column(Text, nullable=True)
     surface_water_conditions = Column(Text, nullable=True)
-    depth = Column(Integer, nullable=True)
+    depth = Column(String, nullable=True)
     swell = Column(Text, nullable=True)
     difficulties_encountered = Column(Text, nullable=True)
     issues_to_be_discussed = Column(Text, nullable=True)

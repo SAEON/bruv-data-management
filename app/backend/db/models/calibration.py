@@ -1,6 +1,6 @@
 """Camera calibration model."""
 
-from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, Text, String
+from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, Text, String, text
 from sqlalchemy.orm import relationship
 from db.database import Base
 
@@ -20,7 +20,7 @@ class Calibration(Base):
     camera_pair = Column(String, nullable=True)
     camera_no = Column(Integer, nullable=True)
     card_no = Column(String, nullable=True)
-    cal_success = Column(Boolean, default=False)
+    cal_success = Column(Boolean, default=False, server_default=text("false"))
     cal_precision = Column(String, nullable=True)
     calib_file_name = Column(String, nullable=True)
 

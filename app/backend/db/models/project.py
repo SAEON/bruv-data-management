@@ -1,4 +1,4 @@
-"""BRUV project model."""
+"""Project model."""
 
 from sqlalchemy import Column, Date, Integer, Text, String
 from sqlalchemy.orm import relationship

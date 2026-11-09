@@ -1,4 +1,4 @@
-"""BRUV equipment deployment model."""
+"""Equipment deployment model."""
 
 from sqlalchemy import Boolean, Column, Date, Float, ForeignKey, Integer, Text, Time, String
 from sqlalchemy.orm import relationship
@@ -29,7 +29,7 @@ class Deployment(Base):
     depth_m = Column(Float, nullable=True)
     sensor_depth_m = Column(Integer, nullable=True)
     light_concentration = Column(String, nullable=True)
-    current_kn = Column(Integer, nullable=True)
+    current_kn = Column(String, nullable=True)
     latitude = Column(Float, nullable=True)
     longitude = Column(Float, nullable=True)
     drop_waypoint = Column(Integer, nullable=True)

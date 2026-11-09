@@ -1,4 +1,4 @@
-"""BRUV field-trip model."""
+"""Field-trip model."""
 
 from sqlalchemy import Column, Date, ForeignKey, Integer, Text, String
 from sqlalchemy.orm import relationship
@@ -33,5 +33,5 @@ class FieldTrip(Base):
 
     project = relationship("Project", back_populates="field_trips")
     day_sheets = relationship("DaySheet", back_populates="field_trip", cascade="all, delete-orphan")
-    calibrations = relationship("Calibration", back_populates="field_trip", cascade="all, delete-orphan")
+    calibrations = relationship("Calibration", back_populates="fieldtrip", cascade="all, delete-orphan")
     deployments = relationship("Deployment", back_populates="field_trip", cascade="all, delete-orphan")
